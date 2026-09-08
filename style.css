@@ -94,16 +94,16 @@ body {
   width: 100%;
 }
 
-/* Kategorie-Balken über die volle Breite ohne abgerundete Ecken */
+/* Full-width Category Header Bar */
 .category-header {
   background-color: var(--primary-orange);
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 0; /* Ecken nicht mehr abrunden */
-  margin: 25px 0 15px 0;
-  width: 100vw; /* Dehnt den Balken auf die volle Bildschirmbreite aus */
+  padding: 12px 20px 12px 80px; /* Left padding creates space for the overlapping icon */
+  border-radius: 0;
+  margin: 35px 0 15px 0;
+  width: 100vw;
   position: relative;
   left: 50%;
   right: 50%;
@@ -111,7 +111,25 @@ body {
   margin-right: -50vw;
   display: flex;
   align-items: center;
-  gap: 10px;
+}
+
+/* Icon positioning & overlay */
+.cat-icon {
+  position: absolute;
+  left: calc(50vw - 48% + 20px); /* Align with your main content container */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.cat-icon img {
+  width: 81px;  /* Matches the target size */
+  height: 91px;
+  object-fit: contain;
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 /* Speisekarten */
