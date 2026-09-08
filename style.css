@@ -94,16 +94,21 @@ body {
   width: 100%;
 }
 
-/* Kategorie-Balken */
+/* Kategorie-Balken über die volle Breite ohne abgerundete Ecken */
 .category-header {
   background-color: var(--primary-orange);
   color: white;
   font-size: 18px;
   font-weight: bold;
   padding: 12px 20px;
-  border-radius: 6px;
+  border-radius: 0; /* Ecken nicht mehr abrunden */
   margin: 25px 0 15px 0;
-  width: 100%;
+  width: 100vw; /* Dehnt den Balken auf die volle Bildschirmbreite aus */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   display: flex;
   align-items: center;
   gap: 10px;
