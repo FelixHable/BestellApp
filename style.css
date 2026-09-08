@@ -17,9 +17,11 @@
 body {
   background-color: #f7f7f7;
   color: var(--text-dark);
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* Header & Banner */
+/* Header & Banner - Volle Breite */
 .top-bar {
   background-color: var(--primary-orange);
   color: white;
@@ -27,6 +29,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .hero-banner {
@@ -34,6 +37,7 @@ body {
   text-align: center;
   background-color: #fff;
   padding-bottom: 20px;
+  width: 100%;
 }
 
 .hero-img-placeholder img {
@@ -77,31 +81,32 @@ body {
   font-size: 14px;
 }
 
-/* Main Layout */
+/* Container nimmt die komplette Breite ein */
 .container {
-  max-width: 1100px;
-  margin: 20px auto;
-  display: flex;
-  gap: 20px;
-  padding: 0 15px;
+  width: 100%;
+  margin: 20px 0;
+  padding: 0 30px;
+  position: relative;
 }
 
+/* Menü nutzt 100% der Breite */
 .menu-section {
-  flex: 2;
+  width: 100%;
 }
 
-/* Kategorie-Header */
+/* Kategorie-Header - Volle Breite */
 .category-header {
   background-color: var(--primary-orange);
   color: white;
   font-size: 18px;
   font-weight: bold;
-  padding: 10px 16px;
+  padding: 12px 20px;
   border-radius: 6px;
   margin: 20px 0 12px 0;
+  width: 100%;
 }
 
-/* Speise-Karten */
+/* Speise-Karten - Erstrecken sich über die ganze Breite */
 .menu-card {
   background: var(--card-bg);
   border: 1px solid #f0e2d8;
@@ -110,6 +115,7 @@ body {
   padding: 12px;
   margin-bottom: 12px;
   gap: 15px;
+  width: 100%;
 }
 
 .menu-card img {
@@ -153,16 +159,20 @@ body {
   color: var(--primary-orange);
 }
 
-/* Warenkorb */
+/* SCHWEBE-WARENKORB (Sticky & Hover über der rechten Seite des Menüs) */
 .basket-sidebar {
-  flex: 1;
+  position: fixed;
+  top: 90px; /* Abstand von oben beim Scrollen */
+  right: 30px; /* Abstand zur rechten Bildschirmkante */
+  width: 320px;
   background-color: var(--dark-sidebar);
   color: white;
   padding: 20px;
-  border-radius: 8px;
-  height: fit-content;
-  position: sticky;
-  top: 20px;
+  border-radius: 12px;
+  box-shadow: -4px 8px 25px rgba(0, 0, 0, 0.3); /* Schatten lässt ihn deutlich "schweben" */
+  z-index: 1000; /* Stellt sicher, dass er ÜBER dem Menü liegt */
+  max-height: calc(100vh - 120px);
+  overflow-y: auto; /* Internes Scrollen bei vielen Artikeln */
 }
 
 .basket-sidebar h2 {
@@ -172,7 +182,7 @@ body {
 }
 
 .basket-item {
-  background-color: #fff;
+  background-color: #fdf5f0;
   color: var(--text-dark);
   padding: 10px;
   border-radius: 6px;
@@ -187,8 +197,18 @@ body {
 .basket-item-controls {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 6px;
   font-size: 12px;
+}
+
+.quantity-btn {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
 }
 
 .basket-summary {
@@ -230,7 +250,7 @@ hr {
   background-color: #d44d13;
 }
 
-/* Footer */
+/* Footer über die volle Breite */
 footer {
   background-color: var(--primary-orange);
   color: white;
@@ -238,6 +258,7 @@ footer {
   padding: 15px;
   margin-top: 40px;
   font-size: 12px;
+  width: 100%;
 }
 
 footer a {
