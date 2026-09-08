@@ -3,98 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BestellApp</title>
+  <title>BurgerHouse</title>
+  <!-- Verknüpfung zur CSS-Datei -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Top Bar -->
   <header class="top-bar">
-    <div class="logo-app">[APP LOGO]</div>
+    <div class="logo-app">BurgerHouse APP</div>
     <div class="burger-menu">☰</div>
   </header>
 
+  <!-- Banner & Profil -->
   <section class="hero-banner">
     <div class="hero-img-placeholder">
-      <img src="https://via.placeholder.com/1200x300?text=Header+Food+Banner" alt="Header Banner" id="hero-img">
+      <img src="https://via.placeholder.com/1200x300?text=Header+Food+Banner" alt="Header Banner">
     </div>
     <div class="restaurant-badge">
-      <img src="https://via.placeholder.com/100?text=Logo" alt="BurgerHouse Logo" class="profile-logo">
+      <img src="https://via.placeholder.com/100?text=Burger" alt="BurgerHouse Logo" class="profile-logo">
       <h1>Burger<span class="highlight">House</span></h1>
       <div class="rating">★ 4.1 <span>(132)</span></div>
       <p class="tagline">The best of Burgers, Pizza, and Greens, all in one great place.</p>
     </div>
   </section>
 
+  <!-- Main Content Layout -->
   <main class="container">
     
+    <!-- Speisekarte (Volle Breite) -->
     <section class="menu-section">
       
+      <!-- KATEGORIE: BURGER & SANDWICHES -->
       <div class="category-header">
         <span class="cat-icon">🍔</span> Burger & Sandwiches
       </div>
       <div class="menu-list">
+        
         <div class="menu-card">
-          <img src="https://via.placeholder.com/120x90?text=Burger" alt="Burger">
+          <img src="https://via.placeholder.com/120x90?text=Veggie+Burger" alt="Veggie mushroom black burger">
           <div class="card-details">
             <div class="card-title-row">
               <h3>Veggie mushroom black burger</h3>
               <span class="price">16,90€</span>
             </div>
-            <p class="ingredients">Mixed greens salad, Tomatoes, Edamame, Mushrooms</p>
-            <button class="add-btn" onclick="addToCart('Veggie mushroom black burger', 16.90)">+ Add to basket</button>
+            <p class="ingredients">Mixed green salad, Tomatoes, Edamame, Mushrooms</p>
+            <button class="add-btn" onclick="addToCart('Veggie mushroom black burger', 16.90)">Added 1</button>
           </div>
         </div>
 
         <div class="menu-card">
-          <img src="https://via.placeholder.com/120x90?text=Burger" alt="Burger">
+          <img src="https://via.placeholder.com/120x90?text=Meat+Burger" alt="All meat burger">
           <div class="card-details">
             <div class="card-title-row">
               <h3>All meat burger</h3>
               <span class="price">15,90€</span>
             </div>
-            <p class="ingredients">Beef, Bacon, Dill pickles, Smoked cheese, Ketchup, BBQ sauce</p>
+            <p class="ingredients">Beef, Bacon, Dill pickles, Smoked cheese, Ketchup, BBQ souse</p>
             <button class="add-btn" onclick="addToCart('All meat burger', 15.90)">+ Add to basket</button>
           </div>
         </div>
+
+        <div class="menu-card">
+          <img src="https://via.placeholder.com/120x90?text=Red+Burger" alt="Beef red burger">
+          <div class="card-details">
+            <div class="card-title-row">
+              <h3>Beef red burger</h3>
+              <span class="price">14,90€</span>
+            </div>
+            <p class="ingredients">Beef, Cheese, Tomatoes, Lettuce, Onion</p>
+            <button class="add-btn" onclick="addToCart('Beef red burger', 14.90)">+ Add to basket</button>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://via.placeholder.com/120x90?text=Chicken+Burger" alt="Big chicken burger">
+          <div class="card-details">
+            <div class="card-title-row">
+              <h3>Big chicken burger</h3>
+              <span class="price">15,90€</span>
+            </div>
+            <p class="ingredients">Chicken, Cheese, Tomatoes, Lettuce, Onion, Bell pepper,</p>
+            <button class="add-btn" onclick="addToCart('Big chicken burger', 15.90)">+ Add to basket</button>
+          </div>
+        </div>
+
       </div>
 
+      <!-- KATEGORIE: PIZZA -->
       <div class="category-header">
         <span class="cat-icon">🍕</span> Pizza (30cm)
       </div>
       <div class="menu-list">
+
         <div class="menu-card">
-          <img src="https://via.placeholder.com/120x90?text=Pizza" alt="Pizza">
+          <img src="https://via.placeholder.com/120x90?text=Margherita" alt="Pizza Margherita">
           <div class="card-details">
             <div class="card-title-row">
               <h3>Pizza Margherita</h3>
               <span class="price">11,90€</span>
             </div>
             <p class="ingredients">Tomato Sauce, Mozzarella</p>
-            <button class="add-btn" onclick="addToCart('Pizza Margherita', 11.90)">+ Add to basket</button>
+            <button class="add-btn" onclick="addToCart('Pizza Margherita', 11.90)">Added 1</button>
           </div>
         </div>
+
+        <div class="menu-card">
+          <img src="https://via.placeholder.com/120x90?text=Chorizo" alt="Pizza Chorizo">
+          <div class="card-details">
+            <div class="card-title-row">
+              <h3>Pizza Chorizo</h3>
+              <span class="price">13,90€</span>
+            </div>
+            <p class="ingredients">Tomato slices, Mozzarella, Chorizo</p>
+            <button class="add-btn" onclick="addToCart('Pizza Chorizo', 13.90)">+ Add to basket</button>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://via.placeholder.com/120x90?text=Funghi" alt="Funghi">
+          <div class="card-details">
+            <div class="card-title-row">
+              <h3>Funghi</h3>
+              <span class="price">12,90€</span>
+            </div>
+            <p class="ingredients">Red onion, Olives, Button Mushrooms, Mozzarella</p>
+            <button class="add-btn" onclick="addToCart('Funghi', 12.90)">+ Add to basket</button>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://via.placeholder.com/120x90?text=4+Formaggi" alt="Quattro Formaggi with Chicken">
+          <div class="card-details">
+            <div class="card-title-row">
+              <h3>Quattro Formaggi with Chicken</h3>
+              <span class="price">15,90€</span>
+            </div>
+            <p class="ingredients">Chicken, Mozzarella, Gorgonzola, Fontina, Parmigiano Reggiano</p>
+            <button class="add-btn" onclick="addToCart('Quattro Formaggi with Chicken', 15.90)">+ Add to basket</button>
+          </div>
+        </div>
+
       </div>
 
+      <!-- KATEGORIE: SALAD -->
       <div class="category-header">
         <span class="cat-icon">🥗</span> Salad
       </div>
       <div class="menu-list">
+
         <div class="menu-card">
-          <img src="https://via.placeholder.com/120x90?text=Salad" alt="Salad">
+          <img src="https://via.placeholder.com/120x90?text=Beef+Salad" alt="Warm beef arugula salad">
+          <div class="card-details">
+            <div class="card-title-row">
+              <h3>Warm beef arugula salad</h3>
+              <span class="price">16,90€</span>
+            </div>
+            <p class="ingredients">Beef, Arugula, Field salad, Greek feta, Cherry tomatoes, Sun-dried Tomatoes, Balsamic-vinegar dressing</p>
+            <button class="add-btn" onclick="addToCart('Warm beef arugula salad', 16.90)">+ Add to basket</button>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://via.placeholder.com/120x90?text=Mini+Salad" alt="Mini green Salad">
           <div class="card-details">
             <div class="card-title-row">
               <h3>Mini green Salad</h3>
               <span class="price">7,90€</span>
             </div>
-            <p class="ingredients">Green salad, Cucumber, Celeriac, Parsley, Radishes</p>
-            <button class="add-btn" onclick="addToCart('Mini green Salad', 7.90)">+ Add to basket</button>
+            <p class="ingredients">Green salad, Cucumber, Carrots, Parsley, Radishes</p>
+            <button class="add-btn" onclick="addToCart('Mini green Salad', 7.90)">Added 1</button>
           </div>
         </div>
+
+        <div class="menu-card">
+          <img src="https://via.placeholder.com/120x90?text=Seafood+Salad" alt="Green Salad with sea food">
+          <div class="card-details">
+            <div class="card-title-row">
+              <h3>Green Salad with sea food</h3>
+              <span class="price">16,90€</span>
+            </div>
+            <p class="ingredients">Mixed greens, Cherry tomatoes, Red onion, Mussels, Squid rings, Shrimp, Dijon mustard-lemon dressing with dill</p>
+            <button class="add-btn" onclick="addToCart('Green Salad with sea food', 16.90)">+ Add to basket</button>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://via.placeholder.com/120x90?text=Tofu+Salad" alt="Vegan green salad with tofu">
+          <div class="card-details">
+            <div class="card-title-row">
+              <h3>Vegan green salad with tofu</h3>
+              <span class="price">14,90€</span>
+            </div>
+            <p class="ingredients">Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts</p>
+            <button class="add-btn" onclick="addToCart('Vegan green salad with tofu', 14.90)">+ Add to basket</button>
+          </div>
+        </div>
+
       </div>
 
     </section>
 
-    <!-- Warenkorb Sidepanel -->
+    <!-- Schwebe-Warenkorb (Overlay auf der rechten Seite) -->
     <aside class="basket-sidebar">
       <h2>Your Basket</h2>
       <div id="cart-items">
@@ -113,10 +223,12 @@
 
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2026 BurgerHouse | <a href="#">Imprint</a> | <a href="#">Cookie Preferences</a></p>
+    <p>© BurgerHouse | <a href="#">Imprint</a> | <a href="#">Cookie Preferences</a></p>
   </footer>
 
+  <!-- Verknüpfung zur JS-Datei -->
   <script src="script.js"></script>
 </body>
 </html>
