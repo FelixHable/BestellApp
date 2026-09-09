@@ -123,27 +123,45 @@ body {
   overflow: visible !important; 
 }
 
-/* 2. Completely Detached Floating Icon Wrapper */
+/* Base Floating Icon Wrapper */
 .cat-icon {
-  position: absolute !important; /* Removed from flex layout flow entirely */
+  position: absolute !important;
   left: calc(50vw - 48%);
   top: 50%;
   transform: translateY(-50%);
-  width: auto;
-  height: auto;
-  z-index: 999;                  /* Keeps icon floating over top & bottom */
+  z-index: 999;
   pointer-events: none;
 }
 
-/* 3. Change image size freely here WITHOUT affecting the bar */
 .cat-icon img {
-  width: 140px !important;       /* Adjust width freely */
-  height: 140px !important;      /* Adjust height freely */
+  display: block;
+  object-fit: contain;
   max-width: none !important;
   max-height: none !important;
-  object-fit: contain;
-  display: block;
   filter: drop-shadow(2px 5px 8px rgba(0, 0, 0, 0.35));
+}
+
+/* 1. Burger Icon: Larger size & shifted further left over card images */
+.icon-burger {
+  left: calc(50vw - 48% - 25px) !important; /* Moves wrapper further left */
+}
+
+.icon-burger img {
+  width: 170px !important;
+  height: 170px !important;
+}
+
+/* 2. Pizza Icon */
+.icon-pizza img {
+  width: 140px !important;
+  height: 140px !important;
+}
+
+/* 3. Salad Icon */
+.icon-salad img {
+  width: 140px !important;
+  height: 140px !important;
+  margin-top: -15px;
 }
 
 /* Speisekarten */
