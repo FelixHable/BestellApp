@@ -94,42 +94,56 @@ body {
   width: 100%;
 }
 
-/* Full-width Category Header Bar */
+/* Container resets to allow pop-out content */
+.container,
+.menu-section {
+  overflow: visible !important;
+}
+
+/* 1. Rigid Orange Banner */
 .category-header {
   background-color: var(--primary-orange);
   color: white;
-  font-size: 20px;
+  font-size: 26px;
   font-weight: bold;
-  padding: 12px 20px 12px 80px; /* Left padding creates space for the overlapping icon */
+  height: 52px;            /* Locked height */
+  line-height: 52px;
   border-radius: 0;
-  margin: 35px 0 15px 0;
+  margin: 60px 0 30px 0;
   width: 100vw;
-  position: relative;
+  position: relative;     /* Anchor for absolute positioning */
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
   display: flex;
   align-items: center;
+  padding-left: calc(50vw - 48% + 150px); /* Indents text past the giant icon */
+  box-sizing: border-box;
+  overflow: visible !important; 
 }
 
-/* Icon positioning & overlay */
+/* 2. Completely Detached Floating Icon Wrapper */
 .cat-icon {
-  position: absolute;
-  left: calc(50vw - 48% + 20px); /* Align with your main content container */
+  position: absolute !important; /* Removed from flex layout flow entirely */
+  left: calc(50vw - 48%);
   top: 50%;
   transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+  width: auto;
+  height: auto;
+  z-index: 999;                  /* Keeps icon floating over top & bottom */
+  pointer-events: none;
 }
 
+/* 3. Change image size freely here WITHOUT affecting the bar */
 .cat-icon img {
-  width: 151px;  /* Matches the target size */
-  height: 161px;
+  width: 140px !important;       /* Adjust width freely */
+  height: 140px !important;      /* Adjust height freely */
+  max-width: none !important;
+  max-height: none !important;
   object-fit: contain;
-  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.2));
+  display: block;
+  filter: drop-shadow(2px 5px 8px rgba(0, 0, 0, 0.35));
 }
 
 /* Speisekarten */
