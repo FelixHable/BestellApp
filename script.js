@@ -92,3 +92,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Helper to scroll to basket on mobile
+function scrollToBasket() {
+  const basket = document.querySelector(".basket-sidebar");
+  if (basket) {
+    basket.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+// Extend your existing renderBasket function to update the badge count
+const originalRenderBasket = renderBasket;
+renderBasket = function() {
+  originalRenderBasket();
+
+  const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+  const badge = document.getElementById("nav-badge");
+
+  if (badge) {
+    if (totalItems > 0) {
+      badge.textContent = totalItems;
+      badge.style.display = "flex";
+    } else {
+      badge.style.display = "none";
+    }
+  }
+};
