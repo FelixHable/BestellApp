@@ -336,3 +336,44 @@ footer a {
   color: white;
   margin: 0 5px;
 }
+
+/* Add this at the bottom of your existing style.css */
+.order-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.order-modal-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.order-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+}
+
+.order-modal-close:hover {
+  color: var(--primary-orange);
+}

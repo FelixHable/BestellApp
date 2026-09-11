@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BurgerHouse</title>
-  <!-- Verknüpfung zur CSS-Datei -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -213,22 +212,32 @@
 
       <div class="basket-summary">
         <div class="summary-row"><span>Subtotal</span> <span id="subtotal">0,00€</span></div>
-        <div class="summary-row"><span>Delivery fee</span> <span>4,99€</span></div>
+        <div class="summary-row"><span>Delivery fee</span> <span id="delivery-fee">0,00€</span></div>
         <hr>
-        <div class="summary-row total"><span>Total</span> <span id="total-price">4,99€</span></div>
+        <div class="summary-row total"><span>Total</span> <span id="total-price">0,00€</span></div>
       </div>
 
-      <button class="checkout-btn" id="checkout-btn">Buy now (0,00€)</button>
+      <button class="checkout-btn" id="checkout-btn" onclick="checkout()" disabled>Buy now (0,00€)</button>
     </aside>
 
   </main>
+
+  <!-- Order Modal Overlay -->
+  <div id="orderModal" class="order-modal-overlay" style="display: none;">
+    <div class="order-modal-card">
+      <button class="order-modal-close" onclick="closeModal()">✕</button>
+      <div style="font-size: 48px; margin-bottom: 12px;">🚴‍♂️</div>
+      <h2>Your order is on the way!</h2>
+      <p style="margin: 12px 0 20px 0; color: #666; font-size: 14px;">Thank you for ordering with BurgerHouse.</p>
+      <button class="checkout-btn" onclick="closeModal()">Back to Menu</button>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
     <p>© BurgerHouse | <a href="#">Imprint</a> | <a href="#">Cookie Preferences</a></p>
   </footer>
 
-  <!-- Verknüpfung zur JS-Datei -->
   <script src="script.js"></script>
 </body>
 </html>
