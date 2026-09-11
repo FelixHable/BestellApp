@@ -377,3 +377,71 @@ footer a {
 .order-modal-close:hover {
   color: var(--primary-orange);
 }
+
+
+/* Mobile Responsiveness for screens up to 480px down to 240px */
+@media screen and (max-width: 600px) {
+  
+  /* Reset padding for small screens */
+  .container {
+    padding: 0 10px;
+  }
+
+  /* Stack Menu Cards Vertically */
+  .menu-card {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  /* Make Product Pictures take 100% Width on top of text */
+  .menu-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .card-details {
+    width: 100%;
+  }
+
+  .card-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  /* Make Add Button full width for easy tapping */
+  .add-btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px 0;
+    text-align: center;
+  }
+
+  /* Adjust floating basket for mobile viewports */
+  .basket-sidebar {
+    position: static;
+    width: 100%;
+    margin-top: 20px;
+    max-height: none;
+  }
+
+  /* Scale category header text and float icons nicely */
+  .category-header {
+    font-size: 18px;
+    padding-left: 70px;
+    margin: 40px 0 20px 0;
+  }
+
+  .cat-icon {
+    left: 10px !important;
+  }
+
+  .cat-icon img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+}
