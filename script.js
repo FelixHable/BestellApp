@@ -82,7 +82,6 @@ function closeModal() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// Close modal when clicking outside of it
 document.addEventListener("DOMContentLoaded", () => {
   renderBasket();
   const modal = document.getElementById("orderModal");
@@ -93,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Helper to scroll to basket on mobile
 function scrollToBasket() {
   const basket = document.querySelector(".basket-sidebar");
   if (basket) {
@@ -101,7 +99,6 @@ function scrollToBasket() {
   }
 }
 
-// Extend your existing renderBasket function to update the badge count
 const originalRenderBasket = renderBasket;
 renderBasket = function() {
   originalRenderBasket();

@@ -8,10 +8,6 @@
   --text-muted: #666;
 }
 
-/* ==========================================================================
-   GLOBAL STYLES
-   ========================================================================== */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,10 +21,6 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-
-/* ==========================================================================
-   TOP HEADER BAR
-   ========================================================================== */
 
 .top-bar {
   width: 100%;
@@ -48,8 +40,8 @@ body {
 }
 
 .logo-app img {
-  height: 32px; /* Adjust height to fit your desired top-bar size */
-  width: auto;  /* Maintains image aspect ratio */
+  height: 32px;
+  width: auto; 
   object-fit: contain;
   display: block;
 }
@@ -60,10 +52,6 @@ body {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   HERO BANNER — CENTERED RESTAURANT HEADER
-   ========================================================================== */
-
 .hero-banner {
   width: 100%;
   max-width: 1440px;
@@ -72,7 +60,6 @@ body {
   background-color: #ffffff;
 }
 
-/* Hero image */
 .hero-img-placeholder {
   width: 100%;
   height: 260px;
@@ -86,7 +73,6 @@ body {
   object-fit: cover;
 }
 
-/* Restaurant information section */
 .restaurant-badge {
   position: relative;
   width: 100%;
@@ -100,7 +86,6 @@ body {
   z-index: 2;
 }
 
-/* Circular restaurant logo overlapping the image */
 .profile-logo {
   position: absolute;
   top: -45px;
@@ -130,7 +115,6 @@ body {
   color: var(--primary-orange);
 }
 
-/* Rating badge */
 .rating {
   display: inline-block;
   margin: 0 0 8px 0;
@@ -143,7 +127,6 @@ body {
   vertical-align: middle;
 }
 
-/* Tagline */
 .tagline {
   margin: 0;
   font-size: 11px;
@@ -151,10 +134,6 @@ body {
   color: #555555;
   text-align: center;
 }
-
-/* ==========================================================================
-   MAIN LAYOUT
-   ========================================================================== */
 
 .container {
   max-width: 1440px;
@@ -164,7 +143,6 @@ body {
   gap: 24px;
 }
 
-/* Allow category icons to extend outside their containers */
 .container,
 .menu-section {
   overflow: visible !important;
@@ -174,83 +152,52 @@ body {
   width: 100%;
 }
 
-/* ==========================================================================
-   CATEGORY HEADER — FULL WIDTH BACKGROUND
-   ========================================================================== */
-
 .category-header {
   position: relative;
-
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-
   height: 52px;
-
   display: flex;
   align-items: center;
-
   background-color: var(--primary-orange);
   color: #ffffff;
-
   font-size: 26px;
   font-weight: bold;
   line-height: 1;
-
   border-radius: 0;
   box-sizing: border-box;
-
-  /* Keep text aligned with the 1440px content */
   padding-left: max(150px, calc((100vw - 1440px) / 2 + 150px));
-
   overflow: visible !important;
 }
 
-/* ==========================================================================
-   CATEGORY ICONS — ALIGNED WITH 1440PX CONTENT
-   ========================================================================== */
-
 .cat-icon {
   position: absolute !important;
-
-  /*
-    Align icon with the left edge of the centered 1440px content.
-    The icon itself remains attached to the category header.
-  */
   left: max(20px, calc((100vw - 1440px) / 2 + 20px)) !important;
   top: 50% !important;
-
   transform: translateY(-50%) !important;
-
   width: 120px !important;
   height: 120px !important;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: transparent !important;
   margin: 0 !important;
   padding: 0 !important;
-
   z-index: 10;
   pointer-events: none;
 }
 
 .cat-icon img {
   display: block !important;
-
   width: 100% !important;
   height: 100% !important;
-
   object-fit: contain !important;
   max-width: none !important;
   max-height: none !important;
-
   margin: 0 !important;
 }
 
-/* Individual icon sizes */
 .icon-burger img {
   width: 140px !important;
   height: 140px !important;
@@ -265,10 +212,6 @@ body {
   width: 120px !important;
   height: 120px !important;
 }
-
-/* ==========================================================================
-   MENU CARDS
-   ========================================================================== */
 
 .menu-list {
   display: flex;
@@ -340,10 +283,6 @@ body {
   border-color: var(--primary-orange);
   color: var(--primary-orange);
 }
-
-/* ==========================================================================
-   BASKET SIDEBAR
-   ========================================================================== */
 
 .basket-sidebar {
   position: fixed;
@@ -435,10 +374,6 @@ hr {
   background-color: #d44d13;
 }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-
 footer {
   width: 100%;
   background-color: var(--primary-orange);
@@ -461,10 +396,6 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
-/* ==========================================================================
-   ORDER MODAL
-   ========================================================================== */
 
 .order-modal-overlay {
   position: fixed;
@@ -490,6 +421,14 @@ footer a:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
+.order-icon {
+  width: 64px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
 .order-modal-close {
   position: absolute;
   top: 12px;
@@ -506,19 +445,9 @@ footer a:hover {
   color: var(--primary-orange);
 }
 
-/* ==========================================================================
-   BOTTOM NAVIGATION
-   Hidden by default — visible only on mobile
-   ========================================================================== */
-
 .bottom-nav {
   display: none;
 }
-
-/* ==========================================================================
-   RESPONSIVE MOBILE STYLES
-   Screens up to 600px
-   ========================================================================== */
 
 @media screen and (max-width: 600px) {
 
@@ -528,10 +457,6 @@ footer a:hover {
     background-color: #ffffff;
   }
 
-  /* --------------------------------------------------------------------------
-     TOP BAR
-     -------------------------------------------------------------------------- */
-
   .top-bar {
     padding: 12px 20px;
   }
@@ -539,10 +464,6 @@ footer a:hover {
   .logo-app {
     font-size: 16px;
   }
-
-  /* --------------------------------------------------------------------------
-     HERO BANNER
-     -------------------------------------------------------------------------- */
 
   .hero-banner {
     width: 100%;
@@ -587,10 +508,6 @@ footer a:hover {
     font-size: 9px;
   }
 
-  /* --------------------------------------------------------------------------
-     MAIN CONTAINER
-     -------------------------------------------------------------------------- */
-
   .container {
     padding: 0 16px;
     flex-direction: column;
@@ -600,10 +517,6 @@ footer a:hover {
     width: 100%;
   }
 
-  /* --------------------------------------------------------------------------
-     CATEGORY HEADER
-     -------------------------------------------------------------------------- */
-
   .category-header {
     position: relative;
     box-sizing: border-box;
@@ -611,11 +524,8 @@ footer a:hover {
     color: #ffffff;
     font-size: 24px;
     font-weight: 700;
-
     text-align: center !important;
     display: block !important;
-
-    /* Space for the floating icon */
     padding: 16px 12px 48px !important;
     margin-top: 50px;
     margin-bottom: 24px;
@@ -623,10 +533,6 @@ footer a:hover {
     height: auto;
     line-height: normal;
   }
-
-  /* --------------------------------------------------------------------------
-     CATEGORY ICON — CENTERED ABOVE HEADER
-     -------------------------------------------------------------------------- */
 
   .cat-icon {
     position: absolute !important;
@@ -648,10 +554,6 @@ footer a:hover {
     display: block;
     margin: 0 auto;
   }
-
-  /* --------------------------------------------------------------------------
-     MENU LIST & CARDS
-     -------------------------------------------------------------------------- */
 
   .menu-list {
     display: flex;
@@ -714,10 +616,6 @@ footer a:hover {
     color: #222222;
   }
 
-  /* --------------------------------------------------------------------------
-     ADD BUTTON
-     -------------------------------------------------------------------------- */
-
   .add-btn {
     width: auto !important;
     background-color: #ffffff !important;
@@ -736,20 +634,11 @@ footer a:hover {
     background-color: #f5f5f5 !important;
   }
 
-  /* --------------------------------------------------------------------------
-     BASKET MOBILE ADAPTATION
-     -------------------------------------------------------------------------- */
-
   .basket-sidebar {
     position: static;
     width: 100%;
     margin-top: 30px;
   }
-
-  /* --------------------------------------------------------------------------
-     STICKY BOTTOM NAVIGATION
-     Visible only on mobile
-     -------------------------------------------------------------------------- */
 
   .bottom-nav {
     display: flex;
