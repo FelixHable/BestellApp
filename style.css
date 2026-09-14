@@ -1,5 +1,5 @@
 :root {
-  --primary-orange: #ea5a1c;
+  --primary-orange: #E76C1F;
   --bg-light-orange: #fdf2ea;
   --dark-sidebar: #33363b;
   --card-bg: #fdf5f0;
@@ -43,9 +43,15 @@ body {
 }
 
 .logo-app {
-  font-weight: bold;
-  font-size: 18px;
-  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.logo-app img {
+  height: 32px; /* Adjust height to fit your desired top-bar size */
+  width: auto;  /* Maintains image aspect ratio */
+  object-fit: contain;
+  display: block;
 }
 
 .burger-menu {
