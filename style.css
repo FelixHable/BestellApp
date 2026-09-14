@@ -169,72 +169,95 @@ body {
 }
 
 /* ==========================================================================
-   CATEGORY HEADER
+   CATEGORY HEADER — FULL WIDTH BACKGROUND
    ========================================================================== */
 
 .category-header {
-  background-color: var(--primary-orange);
-  color: white;
-  font-size: 26px;
-  font-weight: bold;
-  height: 52px;
-  line-height: 52px;
-  border-radius: 0;
-  margin: 60px 0 30px 0;
-  width: 100vw;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  height: 52px;
+
   display: flex;
   align-items: center;
-  padding-left: calc(50vw - 48% + 150px);
+
+  background-color: var(--primary-orange);
+  color: #ffffff;
+
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1;
+
+  border-radius: 0;
+  box-sizing: border-box;
+
+  /* Keep text aligned with the 1440px content */
+  padding-left: max(150px, calc((100vw - 1440px) / 2 + 150px));
+
   overflow: visible !important;
 }
 
 /* ==========================================================================
-   CATEGORY FLOATING ICONS
+   CATEGORY ICONS — ALIGNED WITH 1440PX CONTENT
    ========================================================================== */
 
 .cat-icon {
   position: absolute !important;
-  left: calc(50vw - 48%);
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 999;
+
+  /*
+    Align icon with the left edge of the centered 1440px content.
+    The icon itself remains attached to the category header.
+  */
+  left: max(20px, calc((100vw - 1440px) / 2 + 20px)) !important;
+  top: 50% !important;
+
+  transform: translateY(-50%) !important;
+
+  width: 120px !important;
+  height: 120px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  z-index: 10;
   pointer-events: none;
 }
 
 .cat-icon img {
-  display: block;
-  object-fit: contain;
+  display: block !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: contain !important;
   max-width: none !important;
   max-height: none !important;
-  filter: drop-shadow(2px 5px 8px rgba(0, 0, 0, 0.35));
+
+  margin: 0 !important;
 }
 
-/* Burger icon */
-.icon-burger {
-  left: calc(50vw - 48% - 25px) !important;
-}
-
+/* Individual icon sizes */
 .icon-burger img {
-  width: 170px !important;
-  height: 170px !important;
+  width: 140px !important;
+  height: 140px !important;
 }
 
-/* Pizza icon */
 .icon-pizza img {
-  width: 140px !important;
-  height: 140px !important;
+  width: 120px !important;
+  height: 120px !important;
 }
 
-/* Salad icon */
 .icon-salad img {
-  width: 140px !important;
-  height: 140px !important;
-  margin-top: -15px;
+  width: 120px !important;
+  height: 120px !important;
 }
 
 /* ==========================================================================
@@ -609,6 +632,7 @@ footer a:hover {
     background: transparent !important;
     margin: 0 !important;
     padding: 0 !important;
+    padding-bottom: 20px !important;
   }
 
   .cat-icon img {
